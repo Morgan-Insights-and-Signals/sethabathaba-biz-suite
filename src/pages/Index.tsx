@@ -136,44 +136,58 @@ const Index = () => {
                 title: "Lead Generation",
                 description: "Capture and convert leads from all major social media platforms",
                 icon: Users,
-                color: "bg-orange-100 text-orange-600"
+                color: "bg-orange-100 text-orange-600",
+                image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
               },
               {
-                title: "Compliance & Legal",
-                description: "Stay compliant with regulations and legal requirements",
+                title: "Compliance & Legal (CIPC)",
+                description: "Stay compliant with CIPC regulations and legal requirements",
                 icon: Shield,
-                color: "bg-teal-100 text-teal-600"
+                color: "bg-teal-100 text-teal-600",
+                image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
               },
               {
-                title: "Bookkeeping & Accounting",
-                description: "Professional financial management and reporting",
+                title: "Bookkeeping (QuickBooks/Xero)",
+                description: "Professional financial management with QuickBooks and Xero",
                 icon: TrendingUp,
-                color: "bg-purple-100 text-purple-600"
+                color: "bg-purple-100 text-purple-600",
+                image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
               },
               {
-                title: "Tax Preparation",
-                description: "Expert tax planning and preparation services",
+                title: "Tax Preparation (SARS)",
+                description: "Expert SARS tax planning and preparation services",
                 icon: Target,
-                color: "bg-orange-100 text-orange-600"
+                color: "bg-orange-100 text-orange-600",
+                image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
               },
               {
                 title: "IT Services",
                 description: "Complete IT solutions from software to cloud computing",
                 icon: Target,
-                color: "bg-indigo-100 text-indigo-600"
+                color: "bg-indigo-100 text-indigo-600",
+                image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
               },
               {
                 title: "Digital Services",
                 description: "Web design, digital marketing, and online presence",
                 icon: TrendingUp,
-                color: "bg-teal-100 text-teal-600"
+                color: "bg-teal-100 text-teal-600",
+                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
               }
             ].map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardHeader>
-                  <div className={`w-12 h-12 rounded-lg ${service.color} flex items-center justify-center mb-4`}>
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className={`absolute top-4 left-4 w-12 h-12 rounded-lg ${service.color} flex items-center justify-center`}>
                     <service.icon className="h-6 w-6" />
                   </div>
+                </div>
+                <CardHeader>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                   <CardDescription>{service.description}</CardDescription>
                 </CardHeader>
