@@ -2,10 +2,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Users, Target, TrendingUp, Shield, MessageSquare, Facebook, Linkedin, Twitter, Instagram, Phone, Mail, MapPin, Flame, Mountain } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ArrowRight, Users, Target, TrendingUp, Shield, MessageSquare, Facebook, Linkedin, Twitter, Instagram, Phone, Mail, MapPin, Flame, Mountain, Play } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Index = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-teal-50">
       {/* Navigation */}
@@ -80,9 +84,50 @@ const Index = () => {
                   Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="px-8 py-3 border-orange-600 text-orange-600 hover:bg-orange-50">
-                Watch Demo
-              </Button>
+              <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                <DialogTrigger asChild>
+                  <Button size="lg" variant="outline" className="px-8 py-3 border-orange-600 text-orange-600 hover:bg-orange-50">
+                    <Play className="mr-2 h-5 w-5" />
+                    Watch Demo
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl w-full">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-bold text-center mb-4">
+                      See How We Convert Social Media Into Paying Customers
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden relative">
+                    <iframe
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
+                      title="Thaba Di Mahlwa SMEs BizBoost Demo"
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                  <div className="mt-4 p-4 bg-orange-50 rounded-lg">
+                    <h3 className="font-semibold text-orange-800 mb-2">What You'll Learn:</h3>
+                    <ul className="text-sm text-orange-700 space-y-1">
+                      <li>• How to capture leads from WhatsApp, Facebook, Instagram, LinkedIn, TikTok, and Twitter</li>
+                      <li>• Automated lead nurturing and conversion strategies</li>
+                      <li>• Integration with QuickBooks/Xero for seamless financial management</li>
+                      <li>• CIPC compliance and SARS tax preparation workflows</li>
+                      <li>• Complete IT and digital services to scale your business</li>
+                    </ul>
+                  </div>
+                  <div className="flex gap-4 mt-4">
+                    <Link to="/register" className="flex-1">
+                      <Button className="w-full bg-orange-600 hover:bg-orange-700">
+                        Start Your Free Trial Now
+                      </Button>
+                    </Link>
+                    <Button variant="outline" className="flex-1" onClick={() => setIsVideoOpen(false)}>
+                      Schedule Personal Demo
+                    </Button>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
