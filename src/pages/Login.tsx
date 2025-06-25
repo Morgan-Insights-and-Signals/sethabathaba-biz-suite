@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { ArrowLeft, Mail, Lock, Eye, EyeOff } from "lucide-react";
+import { ArrowLeft, Mail, Lock, Eye, EyeOff, Mountain, Flame } from "lucide-react";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,10 +20,10 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-teal-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="mb-6">
-          <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors">
+          <Link to="/" className="inline-flex items-center text-orange-600 hover:text-orange-700 transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Home
           </Link>
@@ -31,7 +31,20 @@ const Login = () => {
         
         <Card className="shadow-xl">
           <CardHeader className="text-center space-y-1">
-            <div className="text-xl font-bold text-blue-600 mb-2">QwaQWa SMEs BizBoost</div>
+            <div className="flex items-center justify-center mb-2">
+              <div className="relative mr-2">
+                <Mountain className="h-6 w-6 text-gray-700" />
+                <Flame className="absolute -top-1 -right-1 h-3 w-3 text-orange-600" />
+              </div>
+              <div>
+                <div className="text-lg font-bold text-gray-700" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
+                  Thaba Di Mahlwa
+                </div>
+                <div className="text-sm font-light text-orange-600" style={{fontFamily: 'Georgia, serif'}}>
+                  SMEs BizBoost
+                </div>
+              </div>
+            </div>
             <CardTitle className="text-2xl">Welcome Back</CardTitle>
             <CardDescription>
               Sign in to your account to continue
@@ -83,11 +96,11 @@ const Login = () => {
                     Remember me
                   </Label>
                 </div>
-                <Link to="/forgot-password" className="text-sm text-blue-600 hover:text-blue-700">
+                <Link to="/forgot-password" className="text-sm text-orange-600 hover:text-orange-700">
                   Forgot password?
                 </Link>
               </div>
-              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+              <Button type="submit" className="w-full bg-orange-600 hover:bg-orange-700">
                 Sign In
               </Button>
             </form>
@@ -133,7 +146,7 @@ const Login = () => {
             
             <div className="text-center text-sm">
               <span className="text-gray-600">Don't have an account? </span>
-              <Link to="/register" className="text-blue-600 hover:text-blue-700 font-medium">
+              <Link to="/register" className="text-orange-600 hover:text-orange-700 font-medium">
                 Sign up
               </Link>
             </div>

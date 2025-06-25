@@ -2,30 +2,43 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Users, Target, TrendingUp, Shield, MessageSquare, Facebook, Linkedin, Twitter, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Users, Target, TrendingUp, Shield, MessageSquare, Facebook, Linkedin, Twitter, Instagram, Phone, Mail, MapPin, Flame, Mountain } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-teal-50">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-gray-200 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="text-xl font-bold text-blue-600">QwaQWa SMEs BizBoost</div>
+              <div className="flex items-center space-x-3">
+                <div className="relative">
+                  <Mountain className="h-8 w-8 text-charcoal-700" />
+                  <Flame className="absolute -top-1 -right-1 h-4 w-4 text-orange-600" />
+                </div>
+                <div>
+                  <div className="text-lg font-bold text-charcoal-700" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
+                    Thaba Di Mahlwa
+                  </div>
+                  <div className="text-sm font-light text-orange-600" style={{fontFamily: 'Georgia, serif'}}>
+                    SMEs BizBoost
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
-              <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+              <a href="#services" className="text-gray-700 hover:text-orange-600 transition-colors">Services</a>
+              <a href="#features" className="text-gray-700 hover:text-orange-600 transition-colors">Features</a>
+              <a href="#contact" className="text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
             </div>
             <div className="flex space-x-4">
               <Link to="/login">
                 <Button variant="outline">Login</Button>
               </Link>
               <Link to="/register">
-                <Button>Get Started</Button>
+                <Button className="bg-orange-600 hover:bg-orange-700">Get Started</Button>
               </Link>
             </div>
           </div>
@@ -36,24 +49,38 @@ const Index = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center animate-fade-in">
-            <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">
+            <div className="flex items-center justify-center mb-4">
+              <div className="relative mr-4">
+                <Mountain className="h-12 w-12 text-charcoal-700" />
+                <Flame className="absolute -top-2 -right-2 h-6 w-6 text-orange-600" />
+              </div>
+              <div>
+                <h1 className="text-3xl md:text-4xl font-bold text-charcoal-700 mb-1" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
+                  Thaba Di Mahlwa SMEs BizBoost
+                </h1>
+                <p className="text-lg text-orange-600 font-medium" style={{fontFamily: 'Georgia, serif'}}>
+                  Empowering Entrepreneurs, One Business at a Time.
+                </p>
+              </div>
+            </div>
+            <Badge className="mb-4 bg-orange-100 text-orange-800 hover:bg-orange-200">
               🚀 Transform Your Business Today
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Convert Social Media
-              <span className="text-blue-600 block">Into Paying Customers</span>
-            </h1>
+              <span className="text-orange-600 block">Into Paying Customers</span>
+            </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Streamline your lead generation from WhatsApp, Facebook, Instagram, LinkedIn, TikTok, and Twitter. 
               Plus get expert compliance, accounting, and IT services to grow your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/register">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3">
                   Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="px-8 py-3">
+              <Button size="lg" variant="outline" className="px-8 py-3 border-orange-600 text-orange-600 hover:bg-orange-50">
                 Watch Demo
               </Button>
             </div>
@@ -109,13 +136,13 @@ const Index = () => {
                 title: "Lead Generation",
                 description: "Capture and convert leads from all major social media platforms",
                 icon: Users,
-                color: "bg-blue-100 text-blue-600"
+                color: "bg-orange-100 text-orange-600"
               },
               {
                 title: "Compliance & Legal",
                 description: "Stay compliant with regulations and legal requirements",
                 icon: Shield,
-                color: "bg-green-100 text-green-600"
+                color: "bg-teal-100 text-teal-600"
               },
               {
                 title: "Bookkeeping & Accounting",
@@ -139,7 +166,7 @@ const Index = () => {
                 title: "Digital Services",
                 description: "Web design, digital marketing, and online presence",
                 icon: TrendingUp,
-                color: "bg-pink-100 text-pink-600"
+                color: "bg-teal-100 text-teal-600"
               }
             ].map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -161,7 +188,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose BizBoost?
+              Why Choose Thaba Di Mahlwa SMEs BizBoost?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We combine cutting-edge technology with expert business services
@@ -186,8 +213,8 @@ const Index = () => {
               }
             ].map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="bg-blue-100 rounded-full p-6 mb-4 w-20 h-20 mx-auto flex items-center justify-center">
-                  <feature.icon className="h-8 w-8 text-blue-600" />
+                <div className="bg-orange-100 rounded-full p-6 mb-4 w-20 h-20 mx-auto flex items-center justify-center">
+                  <feature.icon className="h-8 w-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -213,19 +240,89 @@ const Index = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
+                  <Phone className="h-5 w-5 text-orange-600 mr-3" />
                   <div className="text-gray-700">
                     <div>+27 067 942 7880</div>
                     <div>+27 068 901 4651</div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
+                  <Mail className="h-5 w-5 text-orange-600 mr-3" />
                   <span className="text-gray-700">Sethabathaba@outlook.com</span>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                  <MapPin className="h-5 w-5 text-orange-600 mr-3" />
                   <span className="text-gray-700">76 Phomolong, Tsheseng, Witsieshoek, 9870</span>
+                </div>
+              </div>
+              
+              {/* Social Media Links */}
+              <div className="mt-8">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Connect With Us</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <a 
+                    href="https://wa.me/27689014651" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-green-600 hover:text-green-700 transition-colors"
+                  >
+                    <MessageSquare className="h-4 w-4 mr-2" />
+                    WhatsApp Business
+                  </a>
+                  <a 
+                    href="https://wa.me/27679427880" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-green-600 hover:text-green-700 transition-colors"
+                  >
+                    <MessageSquare className="h-4 w-4 mr-2" />
+                    WhatsApp Messenger
+                  </a>
+                  <a 
+                    href="https://twitter.com/SethabathabaMor" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-blue-400 hover:text-blue-500 transition-colors"
+                  >
+                    <Twitter className="h-4 w-4 mr-2" />
+                    @SethabathabaMor
+                  </a>
+                  <a 
+                    href="https://instagram.com/morgansethaba" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-pink-600 hover:text-pink-700 transition-colors"
+                  >
+                    <Instagram className="h-4 w-4 mr-2" />
+                    @morgansethaba
+                  </a>
+                  <a 
+                    href="https://linkedin.com/in/Sethabathaba" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-blue-700 hover:text-blue-800 transition-colors"
+                  >
+                    <Linkedin className="h-4 w-4 mr-2" />
+                    @Sethabathaba
+                  </a>
+                  <a 
+                    href="https://tiktok.com/@morgan.ramaili" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-black hover:text-gray-700 transition-colors"
+                  >
+                    <Target className="h-4 w-4 mr-2" />
+                    @morgan.ramaili
+                  </a>
+                  <a 
+                    href="https://facebook.com/morgansethaba" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    <Facebook className="h-4 w-4 mr-2" />
+                    @morgansethaba
+                  </a>
                 </div>
               </div>
             </div>
@@ -239,11 +336,11 @@ const Index = () => {
               <CardContent>
                 <div className="space-y-4">
                   <Link to="/register">
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                    <Button className="w-full bg-orange-600 hover:bg-orange-700">
                       Start Free Trial
                     </Button>
                   </Link>
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full border-orange-600 text-orange-600 hover:bg-orange-50">
                     Schedule Consultation
                   </Button>
                 </div>
@@ -257,24 +354,37 @@ const Index = () => {
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="text-2xl font-bold text-blue-400 mb-4">QwaQWa SMEs BizBoost</div>
+            <div className="flex items-center justify-center mb-4">
+              <div className="relative mr-3">
+                <Mountain className="h-8 w-8 text-gray-300" />
+                <Flame className="absolute -top-1 -right-1 h-4 w-4 text-orange-400" />
+              </div>
+              <div>
+                <div className="text-xl font-bold text-blue-400" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
+                  Thaba Di Mahlwa SMEs BizBoost
+                </div>
+                <div className="text-sm text-orange-400" style={{fontFamily: 'Georgia, serif'}}>
+                  Empowering Entrepreneurs, One Business at a Time.
+                </div>
+              </div>
+            </div>
             <p className="text-gray-400 mb-6">
               Empowering small businesses and nonprofits to thrive in the digital age
             </p>
             <div className="flex justify-center space-x-6">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
                 Contact
               </a>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400">
-                © 2024 QwaQWa SMEs BizBoost. All rights reserved.
+                © 2024 Thaba Di Mahlwa SMEs BizBoost. All rights reserved.
               </p>
             </div>
           </div>
