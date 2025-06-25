@@ -31,7 +31,7 @@ const Login = () => {
         
         <Card className="shadow-xl">
           <CardHeader className="text-center space-y-1">
-            <div className="text-2xl font-bold text-blue-600 mb-2">BizBoost</div>
+            <div className="text-xl font-bold text-blue-600 mb-2">QwaQWa SMEs BizBoost</div>
             <CardTitle className="text-2xl">Welcome Back</CardTitle>
             <CardDescription>
               Sign in to your account to continue

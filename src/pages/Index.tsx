@@ -13,7 +13,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-blue-600">BizBoost</div>
+              <div className="text-xl font-bold text-blue-600">QwaQWa SMEs BizBoost</div>
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
@@ -214,15 +214,18 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">+1 (555) 123-4567</span>
+                  <div className="text-gray-700">
+                    <div>+27 067 942 7880</div>
+                    <div>+27 068 901 4651</div>
+                  </div>
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">hello@bizboost.com</span>
+                  <span className="text-gray-700">Sethabathaba@outlook.com</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">Your City, State</span>
+                  <span className="text-gray-700">76 Phomolong, Tsheseng, Witsieshoek, 9870</span>
                 </div>
               </div>
             </div>
@@ -254,7 +257,7 @@ const Index = () => {
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="text-2xl font-bold text-blue-400 mb-4">BizBoost</div>
+            <div className="text-2xl font-bold text-blue-400 mb-4">QwaQWa SMEs BizBoost</div>
             <p className="text-gray-400 mb-6">
               Empowering small businesses and nonprofits to thrive in the digital age
             </p>
@@ -271,7 +274,7 @@ const Index = () => {
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400">
-                © 2024 BizBoost. All rights reserved.
+                © 2024 QwaQWa SMEs BizBoost. All rights reserved.
               </p>
             </div>
           </div>
