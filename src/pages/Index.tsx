@@ -99,7 +99,7 @@ const Index = () => {
                   </DialogHeader>
                   <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden relative">
                     <iframe
-                      src="https://www.youtube.com/embed/4ut2EkAvVkI?autoplay=1&mute=1"
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
                       title="Thaba Di Mahlwa SMEs BizBoost Demo"
                       className="w-full h-full"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
